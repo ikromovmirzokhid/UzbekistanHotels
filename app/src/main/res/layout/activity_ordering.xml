@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.imb.uzbekistanhotels.viewmodel.OrderingViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FF333333"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Ordering"
+            app:titleTextColor="#fff" />
+
+        <TextView
+            android:id="@+id/hName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@{model.name}"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/adults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hName">
+
+
+            <TextView
+                android:id="@+id/tAdult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line2"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:text="Adults"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/subtractA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:onClick="@{()->model.decreaseNumOfAdults()}"
+                android:src="@drawable/ic_remove_black_24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tAdult" />
+
+            <ImageView
+                android:id="@+id/addA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:onClick="@{()->model.increaseNumOfAdults()}"
+                android:src="@drawable/ic_add_black_24dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tAdult" />
+
+            <TextView
+                android:id="@+id/adultNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.adultNum}"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/subtractA"
+                app:layout_constraintRight_toLeftOf="@id/addA"
+                app:layout_constraintTop_toBottomOf="@id/tAdult"
+                tools:text="0" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bottom_line2"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="@{()->model.typeBtnPressed()}"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:text="@{model.typeOfroom}"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/adults"
+            app:layout_constraintRight_toLeftOf="@id/child"
+            app:layout_constraintTop_toBottomOf="@id/hName"
+            tools:text="Luxurious" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hName">
+
+            <TextView
+                android:id="@+id/tChild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line2"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:text="Children"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/subtractCH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:onClick="@{()->model.decreaseNumOfChildren()}"
+                android:src="@drawable/ic_remove_black_24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tChild" />
+
+            <ImageView
+                android:id="@+id/addCH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:onClick="@{()->model.increaseNumOfChildren()}"
+                android:src="@drawable/ic_add_black_24dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tChild" />
+
+            <TextView
+                android:id="@+id/childNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.childNum}"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/subtractCH"
+                app:layout_constraintRight_toLeftOf="@id/addCH"
+                app:layout_constraintTop_toBottomOf="@id/tChild"
+                tools:text="0" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            app:layout_constraintLeft_toRightOf="@id/adults"
+            app:layout_constraintRight_toLeftOf="@id/child"
+            app:layout_constraintTop_toBottomOf="@id/hName">
+
+            <TextView
+                android:id="@+id/tRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line2"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:text="Room"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/subtractR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:onClick="@{()->model.decreaseNumOfRooms()}"
+                android:src="@drawable/ic_remove_black_24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tRoom" />
+
+            <ImageView
+                android:id="@+id/addR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:onClick="@{()->model.increaseNumOfRooms()}"
+                android:src="@drawable/ic_add_black_24dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tRoom" />
+
+            <TextView
+                android:id="@+id/roomNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.roomNum}"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/subtractR"
+                app:layout_constraintRight_toLeftOf="@id/addR"
+                app:layout_constraintTop_toBottomOf="@id/tRoom"
+                tools:text="1" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/chInDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bottom_line2"
+            android:clickable="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:text="Check-in date"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/room" />
+
+        <TextView
+            android:id="@+id/inDate"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="@{()->model.inDatePressed()}"
+            android:text="@{model.inDate}"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chInDate"
+            tools:text="date" />
+
+        <TextView
+            android:id="@+id/chOutDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bottom_line2"
+            android:clickable="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:text="Check-out date"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/room" />
+
+        <TextView
+            android:id="@+id/outDate"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="@{()->model.outDatePressed()}"
+            android:text="@{model.outDate}"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chOutDate"
+            tools:text="date" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:drawablePadding="8dp"
+            android:hint="Full Name"
+            android:inputType="textPersonName"
+            android:text="@={model.nameTextContent}"
+            android:textColorHint="#9e9d9d"
+            app:error="@{model.nameErrorMessage}"
+            app:layout_constraintTop_toBottomOf="@id/inDate" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableStart="@drawable/ic_email_black_24dp"
+            android:drawablePadding="8dp"
+            android:hint="Email Adress"
+            android:inputType="textEmailAddress"
+            android:text="@={model.emailTextContent}"
+            android:textColorHint="#9e9d9d"
+            app:error="@{model.emailErrorMessage}"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <EditText
+            android:textColorHint="#9e9d9d"
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableStart="@drawable/ic_local_phone_black_24dp"
+            android:drawablePadding="8dp"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:text="@={model.phoneTextContent}"
+            app:error="@{model.phoneErrorMessage}"
+            app:layout_constraintTop_toBottomOf="@id/email" />
+
+        <Button
+            android:id="@+id/orderBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="15dp"
+            android:alpha="0.8"
+            android:background="#302f2f"
+            android:onClick="@{()->model.orderBtnPressed()}"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@{model.totalCost}"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/phone"
+            tools:text="Order Now - $0" />
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

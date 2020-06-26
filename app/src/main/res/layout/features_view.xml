@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_line">
+
+    <TextView
+        android:id="@+id/amenties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Amenities"
+        android:textColor="#000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/wifIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_wifi_black_24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amenties" />
+
+    <TextView
+        android:id="@+id/freeWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Free WiFi"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/wifIcon"
+        app:layout_constraintTop_toBottomOf="@id/amenties" />
+
+    <ImageView
+        android:id="@+id/poolIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_pool_black_24dp"
+        app:layout_constraintRight_toLeftOf="@id/pool"
+        app:layout_constraintTop_toBottomOf="@id/amenties" />
+
+    <TextView
+        android:id="@+id/pool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="112dp"
+        android:text="Pool"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amenties" />
+
+    <ImageView
+        android:id="@+id/parkingIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_local_parking_black_24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/freeWifi" />
+
+    <TextView
+        android:id="@+id/parking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Parking"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/parkingIcon"
+        app:layout_constraintTop_toBottomOf="@id/freeWifi" />
+
+    <ImageView
+        android:id="@+id/freeBreakfast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_free_breakfast_black_24dp"
+        app:layout_constraintRight_toLeftOf="@id/fBreakfast"
+        app:layout_constraintTop_toBottomOf="@id/pool" />
+
+    <TextView
+        android:id="@+id/fBreakfast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:text="Free Breakfast"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pool" />
+
+    <ImageView
+        android:id="@+id/gymIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_fitness_center_black_24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parkingIcon" />
+
+    <TextView
+        android:id="@+id/gym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Fitness Centre"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/gymIcon"
+        app:layout_constraintTop_toBottomOf="@id/parkingIcon" />
+
+    <ImageView
+        android:id="@+id/spaIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_spa_black_24dp"
+        app:layout_constraintRight_toLeftOf="@id/fBreakfast"
+        app:layout_constraintTop_toBottomOf="@id/freeBreakfast" />
+
+    <TextView
+        android:id="@+id/spa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="116dp"
+        android:text="Spa"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fBreakfast"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"/>
+
+</android.support.constraint.ConstraintLayout>

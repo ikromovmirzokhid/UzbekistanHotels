@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/search"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Search" />
+        <item
+            android:id="@+id/favourites"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Favourites" />
+        <item
+            android:id="@+id/ordered"
+            android:icon="@drawable/ic_toc_black_24dp"
+            android:title="Ordered" />
+    </group>
+</menu>

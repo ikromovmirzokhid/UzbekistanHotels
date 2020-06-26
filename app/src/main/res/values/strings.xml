@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Uzbekistan Hotels</string>
+    <string name="title_activity_choose_region">ChooseRegionActivity</string>
+</resources>

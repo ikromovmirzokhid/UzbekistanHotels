@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/hotelImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hotel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/favIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:alpha="0.7"
+            android:src="@drawable/ic_favorite_black_24dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/cardview_decoration"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/hotelImage"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/condition"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:text="Very Good"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/hotelImage"
+            app:layout_constraintLeft_toRightOf="@id/rating" />
+
+        <TextView
+            android:id="@+id/hName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Uzbekistan Hotel"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hotelImage" />
+
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintLeft_toRightOf="@id/star1"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintLeft_toRightOf="@id/star2"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintLeft_toRightOf="@id/star3"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/star5"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_star_grey_24dp"
+            app:layout_constraintLeft_toRightOf="@id/star4"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/lIcon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_place_black_24dp"
+            app:layout_constraintRight_toLeftOf="@id/hLocation"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <TextView
+            android:id="@+id/hLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="17dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:maxWidth="200dp"
+            android:text="45, Musahanov Street, Tashkent"
+            android:textColor="#000"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/hView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_decoration"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/star1" />
+
+        <TextView
+            android:id="@+id/hPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="$50"
+            android:textColor="#278b34"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="per night"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hPrice" />
+
+        <TextView
+            android:id="@+id/viewDeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:text="View Deal"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hView" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="23dp"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            app:layout_constraintLeft_toRightOf="@id/viewDeal"
+            app:layout_constraintTop_toTopOf="@id/hView" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.v7.widget.CardView>

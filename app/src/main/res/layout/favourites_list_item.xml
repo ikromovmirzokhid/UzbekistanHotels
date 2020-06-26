@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/hImage"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/room"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/favIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:alpha="0.6"
+            android:clickable="true"
+            android:src="@drawable/ic_favorite_red_24dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:text="Komil Bukhara Hotel"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/hImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintLeft_toRightOf="@id/star1"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintLeft_toRightOf="@id/star2"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintLeft_toRightOf="@id/star3"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/star5"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_star_grey_24dp"
+            app:layout_constraintLeft_toRightOf="@id/star4"
+            app:layout_constraintTop_toBottomOf="@id/hName" />
+
+        <ImageView
+            android:id="@+id/lIcon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_place_black_24dp"
+            app:layout_constraintRight_toLeftOf="@id/hLocation"
+            app:layout_constraintTop_toBottomOf="@id/star1"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/hLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:maxWidth="120dp"
+            android:text="45, Musahanov Street,Tashkent"
+            android:textColor="#000"
+            app:layout_constraintLeft_toRightOf="@id/lIcon"
+            app:layout_constraintTop_toBottomOf="@id/star1" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/cardview_decoration"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hLocation" />
+
+        <TextView
+            android:id="@+id/condition"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:text="Very Good"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/rating"
+            app:layout_constraintTop_toBottomOf="@id/hLocation" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
